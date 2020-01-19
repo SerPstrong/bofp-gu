@@ -16,13 +16,13 @@
     let resultUsd = rub / usd;
     let resultEuro = rub / euro;
 
-    alert(`${rub} рублей = $${resultUsd} и E${resultEuro}`);
+    alert(`${rub} рублей = $${resultUsd.toFixed(2)} и E${resultEuro.toFixed(2)}`);
 </script>
 
 <script>
-    let a = prompt("Введите длину основания а");
-    let b = prompt("Введите длину основания b");
-    let h = prompt("Введите высоту трапеции h");
+    let a = +prompt("Введите длину основания а");
+    let b = +prompt("Введите длину основания b");
+    let h = +prompt("Введите высоту трапеции h");
     let result = ((a + b) / 2) * h;
 
     alert(`Площадь трапеции будет равна ${result}`);
