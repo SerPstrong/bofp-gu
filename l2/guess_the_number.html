@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Угадай число</title>
+</head>
+<body>
+
+<script>
+    let answer = parseInt(Math.random() * 100);
+    let attempt = 1;
+    let attemptsCount = 7;
+    while (attempt <= attemptsCount) {
+        let userAnswer = prompt("Угадайте число от 0 до 100, увас 7 попыток. Попытка №" + attempt);
+        userAnswer = parseInt(userAnswer);
+        if (userAnswer > answer) {
+            alert("Ваш ответ слишком большой.");
+        } else if (userAnswer < answer) {
+            alert("Ваш ответ слишком маленький.");
+        } else if (userAnswer === answer) {
+            alert("Выугадали!");
+            break;
+        } else {
+            alert("Необходимо ввести число!");
+        }
+        attempt++;
+    }
+    if (attempt > attemptsCount) {
+        alert("К сожалению вы не угадали. Было загадано число:" + answer);
+    }
+</script>
+
+</body>
+</html>
