@@ -1,0 +1,51 @@
+<meta charset='utf-8'>
+<script type="text/javascript">
+    
+    function maxArr(maxNum) { // ПУНКТ С
+        var max = maxNum[0];
+        for (var i = 1; i < maxNum.length; i++) {
+            if (maxNum[i] > max) {
+                max = maxNum[i];
+            }
+        }
+        return max;
+    }
+    function minArr(maxNum) { // ПУНКТ С
+        var min = maxNum[0];
+        for (var i = 1; i < maxNum.length; i++) {
+            if (maxNum[i] < min) {
+                min = maxNum[i];
+            }
+        }
+        return min;
+    }
+    function evenNum(maxNum) { // ПУНКТ f
+        var even = [];
+        for (var i = 0; i < maxNum.length; i++) {
+            if (maxNum[i] % 2 == 0) {
+                even.push(maxNum[i]);
+            }
+        }
+        return even;
+    }
+    var n = +prompt('Введите любое целое положительное число');
+
+    var maxNum = []; // СОЗДАНИЕ МАССИВА ДЛЯ РЕШЕНИЯ ПУНКТОВ C, D, F
+    for (var a = 0; a < n; a++) {
+        var randomNum = parseInt(Math.random() * 100);
+        maxNum.push(randomNum);
+    }
+
+    maxArr(maxNum);
+    var MaxArray = maxArr(maxNum);
+    document.write(maxNum + '  <br><br>Максимальное число = ' + MaxArray);
+
+    minArr(maxNum);
+    var MinArray = minArr(maxNum);
+    document.write('  <br><br>Минимальное число = ' + MinArray);
+
+    evenNum(maxNum);
+    var NumberEven = evenNum(maxNum);
+    document.write('<br><br>Четные цифры из массива <br>' + NumberEven);
+
+</script>

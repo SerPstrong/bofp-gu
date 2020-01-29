@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function max(array) {
+            let count = array.length;
+            let nocount = true;
+            let result = Number.NEGATIVE_INFINITY;
+            let buf;
+            for (let i = 0; i < count; ++i) {
+                buf = array[i];
+                if (buf != null && buf > result) {
+                    result = buf;
+                    if (nocount)
+                        nocount = false;
+                }
+            }
+            if (nocount) throw new Error("count == 0");
+            return result;
+        }
+</script>

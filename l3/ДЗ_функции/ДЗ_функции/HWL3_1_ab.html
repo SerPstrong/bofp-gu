@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    
+    function nambers() { // ПУНКТ А
+        var N = [];
+        for (var i = 1; i <= n; i++) {
+            N.push(i);
+        }
+        return N;
+    }
+
+    function sumArr() { // ПУНКТ В
+        var sum = 0;
+        for (var j = 0; j < M.length; j++) {
+            sum += M[j];
+        }
+        return sum;
+    }
+
+    var n = +prompt('Введите любое целое положительное число');
+
+    nambers();
+    var M = nambers();
+    document.write('В массиве ' + M.length + ' чисел<br><br>' + M + ' <br><br>');
+
+    sumArr();
+    var arrsum = sumArr();
+    document.write('Сумма чисел массива =  ' + arrsum + ' <br><br>');
+
+</script>

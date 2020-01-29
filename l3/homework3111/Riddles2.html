@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	//Задаем переменную счетчику ответов
+	var countAnswer = 0;
+
+	//Создаем функцию
+	function funcRiddles(riddle, correctAnswer, ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8){
+		var userAnswer = prompt(riddle);
+		if(userAnswer == ans1 || userAnswer == ans2 || userAnswer == ans3 || userAnswer == ans4 || userAnswer == ans5 || userAnswer == ans6 || userAnswer == ans7 || userAnswer == ans8){
+			alert("Поздравляем! Ответ верный!");
+			countAnswer++;
+		} else alert("Вы ответили неверно!\nПравильный ответ: " + correctAnswer);
+	}
+
+	//Запускаем функции с параметрами
+	funcRiddles("Угадайте загадку:\nКаждый взрослый в Новый год,\nЕе очень-очень ждет,\nИ надеется вот-вот,\nЕе бухгалтер принесет!", "Премия", "Премия", "премия");
+	funcRiddles("Угадайте загадку:\nЧеловеческого роста, фигура супер просто: 30:60:90.", "Снежная баба", "Снежная баба", "снежная баба", "Снеговик", "снеговик");
+	funcRiddles("Угадайте загадку:\nВсех людей он покоряет,\nЗаставляет танцевать,\nТрезвый смотрится как пьяный,\nТы попробуй отгадать!", "Гололед", "Гололед", "гололед", "Гололёд", "гололёд", "Лёд", "лёд", "Лед", "лед");
+
+	//Выводим ответ
+	alert("Игра завершена! Количество правильных ответов: " + countAnswer);
+
+	/*let arr = ["Яблоко", "Апельсин", "Груша"];
+
+	for (let i = 0; i < arr.length; i++) {
+	  alert( arr[i] );
+	}*/
+
+
+</script>
+

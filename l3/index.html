@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const arr = [];
+    func = (n) => {
+        let i = 0;
+        while (i < n) {
+            arr.push([i]);
+            i++;
+        }
+    };
+    func(34);
+    document.write(arr + "<br>");
+    const arrNum = [2, 3, 4];
+    let result = arrNum.reduce(function (sum, current) {
+        return sum + current
+    });
+    document.write(result + "<br>");
+    const arrNumb = [11, 34, 7, 567, 54];
+
+    function getMaxOfArray(aNum) {
+        return Math.max.apply(null, aNum);
+    }
+
+    function getMinOfArray(aNum) {
+        return Math.min.apply(null, aNum);
+    }
+
+    document.write(getMaxOfArray(arrNumb) + "<br>");
+    document.write(getMinOfArray(arrNumb) + "<br>");
+</script>
+</body>
+</html>
