@@ -6,7 +6,7 @@ console.log(foo([10,15,17,26]));    // [10, 26] -- 2 числовых элеме
 function foo(arr){
     let res = [];
     for(let i=0; i<arr.length; i++){
-        arr[i] % 2 == 0 ? res.push(arr[i]) : '';
+        arr[i] % 2 === 0 ? res.push(arr[i]) : '';
     }
     return res;
 }
